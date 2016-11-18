@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.window = @"w2r";
-    [RACObserve(self, window) subscribeNext:^(id  _Nullable x) {
+    [[RACObserve(self, window) filter:^BOOL(NSString *value) {
+        return [value hasPrefix:@"b"];
+    }] subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];
     // Do any additional setup after loading the view, typically from a nib.
