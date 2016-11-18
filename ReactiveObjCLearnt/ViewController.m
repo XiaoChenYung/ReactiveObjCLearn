@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *uname;
+@property (weak, nonatomic) IBOutlet UITextField *psd;
+@property (weak, nonatomic) IBOutlet UIButton *okBtn;
 @property (copy, nonatomic) NSString *window;
 @end
 
@@ -16,12 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.window = @"w2r";
-    [[RACObserve(self, window) filter:^BOOL(NSString *value) {
-        return [value hasPrefix:@"b"];
-    }] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@",x);
+    
+    RAC(self.okBtn, hidden) = [RACSignal combineLatest:@[RACObserve(self, uname.text), RACObserve(self, psd.text)] reduce:^(NSString *uname, NSString *psd){
+        return @([uname isEqualToString:psd]);
     }];
+    
+//    self.window = @"w2r";
+//    [[RACObserve(self, window) filter:^BOOL(NSString *value) {
+//        return [value hasPrefix:@"b"];
+//    }] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
