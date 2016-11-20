@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "TwoViewController.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *uname;
 @property (weak, nonatomic) IBOutlet UITextField *psd;
@@ -20,7 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self signal];
+//    [self signal];
+}
+- (IBAction)pop:(UIButton *)sender {
+    TwoViewController *two = [[TwoViewController alloc] init];
+    two.subject = [RACSubject subject];
+    [two.subject subscribeNext:^(id  _Nullable x) {
+        self.uname.text = x;
+    }];
+    [self.navigationController pushViewController:two animated:true];
+}
+
+- (void)subject {
+    
 }
 
 - (void)signal {
