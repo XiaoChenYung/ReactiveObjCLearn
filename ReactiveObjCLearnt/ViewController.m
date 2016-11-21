@@ -23,6 +23,9 @@
     [super viewDidLoad];
 //    [self signal];
 }
+
+
+
 - (IBAction)pop:(UIButton *)sender {
     TwoViewController *two = [[TwoViewController alloc] init];
     two.subject = [RACSubject subject];

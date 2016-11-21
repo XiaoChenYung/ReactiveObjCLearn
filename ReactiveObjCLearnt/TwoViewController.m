@@ -48,7 +48,7 @@
 
 - (void)btnOnClick {
     [_subject sendNext:@"ws"];
-    
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 /*
