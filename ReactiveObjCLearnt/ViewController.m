@@ -24,7 +24,15 @@
 //    [self signal];
 }
 
-
+- (void)bind {
+    RACSubject *subject = [RACSubject subject];
+    RACSignal *signal = [subject bind:^RACStreamBindBlock{
+        return ^RACSignal *(id value,BOOL stop) {
+            value = @3;
+            return [racre];
+        }
+    }];
+}
 
 - (IBAction)pop:(UIButton *)sender {
     TwoViewController *two = [[TwoViewController alloc] init];
