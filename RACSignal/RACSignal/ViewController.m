@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self test1];
+    return;
+    
     // Do any additional setup after loading the view, typically from a nib.
     // 1.创建信号
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -39,7 +43,7 @@
         NSLog(@"======%@", x);
     }];
     // 取消订阅
-    [disposable dispose];
+//    [disposable dispose];
 
 }
 
@@ -61,7 +65,21 @@
     5.拿到订阅者的nextBlock调用
  */
 
-
+- (void)test1 {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"hasjhdf"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"done");
+        }];
+    }];
+    
+    RACDisposable *disposable = [signal subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [disposable dispose];
+}
 
 
 - (void)didReceiveMemoryWarning {
