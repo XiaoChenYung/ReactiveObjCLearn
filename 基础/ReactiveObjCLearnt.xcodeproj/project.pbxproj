@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4AA5F77E1DE1420E00612042 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5F77D1DE1420E00612042 /* TwoViewController.m */; };
+		92724A7A1DE8484100135290 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 92724A791DE8484100135290 /* User.m */; };
 		9276C13D1DDED91500BA8889 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276C13C1DDED91500BA8889 /* main.m */; };
 		9276C1401DDED91600BA8889 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276C13F1DDED91600BA8889 /* AppDelegate.m */; };
 		9276C1431DDED91600BA8889 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276C1421DDED91600BA8889 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		4AA5F77C1DE1420E00612042 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		4AA5F77D1DE1420E00612042 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		92724A781DE8484100135290 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		92724A791DE8484100135290 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9276C1381DDED91500BA8889 /* ReactiveObjCLearnt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveObjCLearnt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9276C13C1DDED91500BA8889 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9276C13E1DDED91600BA8889 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				9276C13F1DDED91600BA8889 /* AppDelegate.m */,
 				9276C1411DDED91600BA8889 /* ViewController.h */,
 				9276C1421DDED91600BA8889 /* ViewController.m */,
+				92724A781DE8484100135290 /* User.h */,
+				92724A791DE8484100135290 /* User.m */,
 				4AA5F77C1DE1420E00612042 /* TwoViewController.h */,
 				4AA5F77D1DE1420E00612042 /* TwoViewController.m */,
 				9276C1441DDED91600BA8889 /* Main.storyboard */,
@@ -184,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92724A7A1DE8484100135290 /* User.m in Sources */,
 				9276C1431DDED91600BA8889 /* ViewController.m in Sources */,
 				9276C1401DDED91600BA8889 /* AppDelegate.m in Sources */,
 				9276C13D1DDED91500BA8889 /* main.m in Sources */,
